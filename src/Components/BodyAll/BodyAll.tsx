@@ -1,12 +1,16 @@
 import React from 'react'
 import Filter from '../Filter/Filter'
+import HomeAll from '../Home/HomeAll'
 
 const BodyAll = () => {
-  return (
-    <>
-    <Filter/>
-    </>
-  )
+    return (
+        <>
+            <div className='flex justify-evenly'>
+                <Filter />
+                <HomeAll/>
+            </div>
+        </>
+    )
 }
 
 export default BodyAll

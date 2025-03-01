@@ -382,16 +382,22 @@ export let dataBase2 = [
 
 
 export const dataRegion = [
-  { text: "Դիլիջան", id: 1 },
-  { text: "Ծաղկաձոր", id: 2 },
-  { text: "Երևան", id: 3 },
-  { text: "Աշտարակ", id: 7 },
-  { text: "Ձորաղբյուր", id: 4 },
-  { text: "Արզնի", id: 5 },
-  { text: "Աբովյան", id: 9 },
-  { text: "Պտղնի", id: 10 },
-  { text: "Քասախ", id: 12 },
-  { text: "Օհանավան", id: 14 },
+
+    { name: "Դիլիջան", count: 77 },
+    { name: "Ծաղկաձոր", count: 54 },
+    { name: "Ձորաղբյուր", count: 14 },
+    { name: "Աշտարակ", count: 14 },
+    { name: "Երևան", count: 13 },
+    { name: "Գառնի", count: 11 },
+    { name: "Արզնի", count: 10 },
+    { name: "Ջրվեժ", count: 10 },
+    { name: "Նոր Հաճն", count: 8 },
+    { name: "Աբովյան", count: 7 },
+    { name: "Քասախ", count: 6 },
+    { name: "Պտղնի", count: 6 },
+    { name: "Զովունի", count: 6 },
+    { name: "Սևան", count: 6 },
+  
 ];
 export const dataFeatures = [
   { text: "Սպասք", id: 1 },
@@ -902,4 +908,3 @@ export const dataRegionImg = [
   },
 
 ];
-
