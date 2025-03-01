@@ -6,10 +6,16 @@ interface Region {
   count: number;
 }
 
+
 interface Currency {
   symbol: JSX.Element;
   id: string;
 }
+interface FilterProps {
+  setMinPrice: React.Dispatch<React.SetStateAction<string>>;
+  setMaxPrice: React.Dispatch<React.SetStateAction<string>>;
+}
+
 
 const currencies: Currency[] = [
   { id: "usd", symbol: <i className="fa fa-dollar" style={{ fontSize: "16px" }}></i> },
@@ -17,14 +23,13 @@ const currencies: Currency[] = [
   { id: "rub", symbol: <i className="fa fa-ruble" style={{ fontSize: "16px" }}></i> },
 ];
 
-const Filter: React.FC = () => {
+const Filter:  React.FC<FilterProps> = ({ setMinPrice, setMaxPrice }) => {
   const [count, setCount] = useState(0);
   const [count2, setCount2] = useState(0);
 
   const [selected, setSelected] = useState<string>("Բոլորը");
   const [selectedCurrency, setSelectedCurrency] = useState<string | null>(null);
-  const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
+  
 
   return (
     <div className="w-[300px] flex flex-col space-y-4 lg:space-y-6 p-4 sm:p-6 lg:p-5 lg:rounded-2xl lg:border h-full overflow-y-auto lg:border-secondary-extra-light max-sm:pb-20">
@@ -63,8 +68,8 @@ const Filter: React.FC = () => {
             <input
               className="w-full h-[24px] bg-transparent text-secondary text-xs md:text-text3 outline-none"
               placeholder="Սկսած"
-              value={minPrice}
-              onChange={(e) => setMinPrice(e.target.value)}
+              
+              onChange={(e) => setMinPrice(e.target.value || "0")}
             />
           </label>
           <div className="w-2 h-px bg-secondary"></div>
@@ -72,8 +77,7 @@ const Filter: React.FC = () => {
             <input
               className="w-full h-[24px] bg-transparent text-secondary text-xs md:text-text3 outline-none"
               placeholder="Մինչև"
-              value={maxPrice}
-              onChange={(e) => setMaxPrice(e.target.value)}
+              onChange={(e) => setMaxPrice(e.target.value || "999999")}
             />
           </label>
         </div>
