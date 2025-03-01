@@ -1,35 +1,24 @@
 export let data = [
   {
-    id: 1,
-    url: "https://api.amaranoc.am/home.svg",
-    text: "Առանձնատներ",
+    label: "Առանձնատներ", url: "https://api.amaranoc.am/home.svg",
   },
   {
-    id: 2,
-    url: "https://api.amaranoc.am/frame_house.svg",
-    text: "Frame Houses",
+    label: "Frame houses", url: "https://api.amaranoc.am/frame_house.svg",
   },
   {
-    id: 3,
-    url: "https://api.amaranoc.am/cabins.svg",
-    text: "Տնակներ",
+    label: "Տնակներ", url: "https://api.amaranoc.am/close_pool.svg",
   },
-  {
-    id: 4,
-    url: "https://api.amaranoc.am/close_pool.svg",
-    text: "Փակ լողավազան",
-  },
-  {
-    id: 5,
-    url: "https://api.amaranoc.am/far_from_noise.svg",
-    text: "Աղմուկից հեռու",
-  },
-  {
-    id: 6,
-    url: "https://api.amaranoc.am/view.svg",
-    text: "Շքեղ տեսարան",
-  },
-];
+  { label: "Փակ լողավազան", url:"https://api.amaranoc.am/close_pool.svg"},
+  { label: "Աղմուկից հեռու",  url: "https://api.amaranoc.am/far_from_noise.svg",},    
+  { label: "Շքեղ տեսարան",  url:"https://api.amaranoc.am/view.svg" },
+  { label: "Պահանջված", url:"https://api.amaranoc.am/nobel.svg" },
+  { label: "Լճի ափին", url:"https://api.amaranoc.am/along_lake.svg" },
+  { label: "Գետի ափին", url:"https://api.amaranoc.am/along_lake.svg" },
+  { label: "Դիզայն",  url:"https://api.amaranoc.am/designed.svg" },
+  { label: "Հյուրանոցներ", url:"https://api.amaranoc.am/hotel.svg" },
+  { label: "Նոր", url:"https://api.amaranoc.am/new.svg" },
+  { label: "Բնակարաններ", url:"https://api.amaranoc.am/house.svg" },
+]
 export const dataBase = [
   {
     id: 2,
@@ -383,21 +372,21 @@ export let dataBase2 = [
 
 export const dataRegion = [
 
-    { name: "Դիլիջան", count: 77 },
-    { name: "Ծաղկաձոր", count: 54 },
-    { name: "Ձորաղբյուր", count: 14 },
-    { name: "Աշտարակ", count: 14 },
-    { name: "Երևան", count: 13 },
-    { name: "Գառնի", count: 11 },
-    { name: "Արզնի", count: 10 },
-    { name: "Ջրվեժ", count: 10 },
-    { name: "Նոր Հաճն", count: 8 },
-    { name: "Աբովյան", count: 7 },
-    { name: "Քասախ", count: 6 },
-    { name: "Պտղնի", count: 6 },
-    { name: "Զովունի", count: 6 },
-    { name: "Սևան", count: 6 },
-  
+  { name: "Դիլիջան", count: 77 },
+  { name: "Ծաղկաձոր", count: 54 },
+  { name: "Ձորաղբյուր", count: 14 },
+  { name: "Աշտարակ", count: 14 },
+  { name: "Երևան", count: 13 },
+  { name: "Գառնի", count: 11 },
+  { name: "Արզնի", count: 10 },
+  { name: "Ջրվեժ", count: 10 },
+  { name: "Նոր Հաճն", count: 8 },
+  { name: "Աբովյան", count: 7 },
+  { name: "Քասախ", count: 6 },
+  { name: "Պտղնի", count: 6 },
+  { name: "Զովունի", count: 6 },
+  { name: "Սևան", count: 6 },
+
 ];
 export const dataFeatures = [
   { text: "Սպասք", id: 1 },

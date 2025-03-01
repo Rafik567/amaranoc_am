@@ -50,11 +50,7 @@ const Filter: React.FC = () => {
             <button
               key={currency.id}
               onClick={() => setSelectedCurrency(currency.id)}
-              className={`py-3 px-6 rounded-full flex justify-center items-center w-[34px] h-[34px] border transition-colors duration-300 ${
-                selectedCurrency === currency.id
-                  ? "text-white bg-secondary border-secondary"
-                  : "text-secondary border-secondary-extra-light hover:bg-gray"
-              }`}
+              className="py-3 px-6 rounded-full flex justify-center items-center w-[34px] h-[34px] border transition-colors duration-300 "
             >
               {currency.symbol}
             </button>
