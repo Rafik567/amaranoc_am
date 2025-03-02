@@ -8,32 +8,44 @@ interface Offer {
   id: number;
   title: string;
   description: string;
-  image1: string;
-  image2: string;
-  image3: string;
+  image1?: string;
+  image2?: string;
+  image3?: string;
+  region?: string;
 }
 
 interface BestOffersProps {
   minPrice: string;
   maxPrice: string;
+  selectedRegions: string[];
 }
 
-const BestOffers: React.FC<BestOffersProps> = ({ minPrice, maxPrice }) => {
+const BestOffers: React.FC<BestOffersProps> = ({ minPrice, maxPrice, selectedRegions }) => {
   const [filteredOffers, setFilteredOffers] = useState<Offer[]>([]);
 
   useEffect(() => {
-    console.log("Ֆիլտրի փոփոխություն:", { minPrice, maxPrice });
+    if (!dataBase || dataBase.length === 0) {
+      console.warn("❌ dataBase-ը դատարկ է կամ undefined!");
+      return;
+    }
+
+    console.log("✅ Ֆիլտրվող տվյալները՝", dataBase);
 
     const newFilteredOffers = dataBase.filter((offer: Offer) => {
+      if (!offer.title) return false; // Եթե title չկա, թող բաց թողնի
+      
       const price = parseInt(offer.title.replace(/\D/g, ""), 10);
       const min = minPrice ? parseInt(minPrice, 10) : 0;
       const max = maxPrice ? parseInt(maxPrice, 10) : Infinity;
+      const matchesRegion =
+        selectedRegions.length === 0 ||
+        (offer.region && selectedRegions.some(region => offer.region?.includes(region)));
 
-      return price >= min && price <= max;
+      return price >= min && price <= max && matchesRegion;
     });
 
     setFilteredOffers(newFilteredOffers);
-  }, [minPrice, maxPrice]);
+  }, [minPrice, maxPrice, selectedRegions, dataBase]);
 
   return (
     <>
@@ -47,9 +59,10 @@ const BestOffers: React.FC<BestOffersProps> = ({ minPrice, maxPrice }) => {
             <div key={offer.id} className="border w-[500px] rounded-lg shadow-lg p-4">
               <div className="relative w-full h-48">
                 <Slider dots infinite={false} speed={500} slidesToShow={1} slidesToScroll={1}>
-                  <img src={offer.image1} className="rounded-lg object-cover w-full h-48" alt={offer.description} />
-                  <img src={offer.image2} className="rounded-lg object-cover w-full h-48" alt={offer.description} />
-                  <img src={offer.image3} className="rounded-lg object-cover w-full h-48" alt={offer.description} />
+                  {offer.image1 ? <img src={offer.image1} className="rounded-lg object-cover w-full h-48" alt={offer.description} />
+                    : <img src="/default.jpg" className="rounded-lg object-cover w-full h-48" alt="No Image Available" />}
+                  {offer.image2 && <img src={offer.image2} className="rounded-lg object-cover w-full h-48" alt={offer.description} />}
+                  {offer.image3 && <img src={offer.image3} className="rounded-lg object-cover w-full h-48" alt={offer.description} />}
                 </Slider>
               </div>
               <h3 className="text-lg font-semibold mt-2">{offer.title}</h3>
@@ -57,7 +70,7 @@ const BestOffers: React.FC<BestOffersProps> = ({ minPrice, maxPrice }) => {
             </div>
           ))
         ) : (
-          <p>Չկան առաջարկներ</p>
+          <p className="text-center text-gray-500">Ընտրված շրջանի առաջարկներ չկան</p>
         )}
       </div>
     </>

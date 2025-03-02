@@ -1,5 +1,8 @@
 import React from "react";
 import TopHeader from "../Header/TopHeader";
+import Prize from "../BodyAll/Prize";
+import BestOffers from "../OfferDetails/BestOffers";
+import Post from "../Post/Post";
 
 interface Discount {
   id: number;
@@ -17,7 +20,7 @@ const discounts: Discount[] = [
 const DisCount: React.FC = () => {
   return (
     <>
-    
+      <TopHeader />
       <div className="flex justify-center items-center mb-6">
         <strong className="px-5 xs:px-10 md:px-20 w-max text-[26px] xs:text-h4 sm:text-h3 md-max:text-h2 text-secondary !font-armHmk z-[1]">
           Հատուկ զեղչեր
@@ -40,7 +43,10 @@ const DisCount: React.FC = () => {
             </div>
           </div>
         ))}
+
       </div>
+      <Prize />
+      
     </>
   );
 };

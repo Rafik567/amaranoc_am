@@ -1,9 +1,11 @@
 import React from 'react';
 import TopHeader from '../Header/TopHeader';
+import Post from '../Post/Post';
 
 const About: React.FC = () => {
   return (
     <>
+    <TopHeader/>
       <div className="container mx-auto px-4">
         <div className="about-fon">
           <img 
@@ -13,8 +15,6 @@ const About: React.FC = () => {
           />
         </div>
 
-
-
         <div className="mt-[50px]">
           <img 
             src="https://amaranoc.am/_next/image?url=%2Fimages%2Fabout-us%2Fabout-background-pc.jpg&w=1920&q=75"
@@ -22,9 +22,6 @@ const About: React.FC = () => {
             alt="Cooperate"
           />
         </div>
-
-
-
         <div className="mt-[50px]">
           <img 
             src="https://amaranoc.am/_next/image?url=%2Fimages%2Fabout-us%2Fabout-background-pc.jpg&w=1920&q=75"
@@ -33,6 +30,7 @@ const About: React.FC = () => {
           />
         </div>
       </div>
+      <Post/>
     </>
   );
 }

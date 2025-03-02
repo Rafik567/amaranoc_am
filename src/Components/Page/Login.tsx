@@ -8,21 +8,15 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState<string>("");
 
   function log() {
-    if (!email || !password) {
-      alert("Խնդրում ենք լրացնել բոլոր դաշտերը!");
-      return; 
-    }
-
     if (email === "amaranoc@gmail.com" && password === "123456") {
       localStorage.setItem("key", "true");
-      nav("/"); 
-    } else {
-      alert("Սխալ էլ․ հասցե կամ գաղտնաբառ");
+      location.reload();
     }
   }
 
   return (
     <>
+    <TopHeader/>
       <div className="mt-[100px] flex flex-col items-center px-4">
         <div className="text-center text-xl font-bold">Մուտք</div>
         <hr className="w-full max-w-[300px] mt-2" />
@@ -32,7 +26,6 @@ const Login: React.FC = () => {
             type="email"
             className="w-full rounded-[10px] border-2 border-gray-300 p-2"
             placeholder="Էլ․ հասցե"
-            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -42,7 +35,6 @@ const Login: React.FC = () => {
             type="password"
             className="w-full rounded-[10px] border-2 border-gray-300 p-2"
             placeholder="Գաղտնաբառ"
-            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>

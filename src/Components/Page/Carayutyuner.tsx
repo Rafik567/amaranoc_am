@@ -1,6 +1,8 @@
 import React from "react";
 import TopHeader from "../Header/TopHeader";
 import { data, dataCara, dataTesak } from "../Data/DataBase";
+import Footer from "../Footer/Footer";
+import Post from "../Post/Post";
 
 interface ItemCara {
   id: number;
@@ -19,7 +21,7 @@ interface ItemTesak {
 const Carayutyuner: React.FC = () => {
   return (
     <>
-    
+    <TopHeader/>
       <hr className="mt-[50px]" />
       <div className="flex justify-evenly mt-10 flex-wrap gap-1 sm:gap-12">
         {dataCara.map((el: ItemCara) => (
@@ -69,6 +71,7 @@ const Carayutyuner: React.FC = () => {
         ))}
       </div>
 
+      <Post/>
     </>
   );
 };
