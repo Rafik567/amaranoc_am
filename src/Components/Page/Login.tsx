@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import TopHeader from "../Header/TopHeader";
+import Post from "../Post/Post";
+import Footer from "../Footer/Footer";
 
 const Login: React.FC = () => {
   const nav = useNavigate();
@@ -67,6 +69,8 @@ const Login: React.FC = () => {
           </Link>
         </div>
       </div>
+      <Post/>
+      <Footer/>
     </>
   );
 };

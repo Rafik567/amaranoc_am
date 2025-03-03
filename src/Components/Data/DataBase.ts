@@ -8,16 +8,16 @@ export let data = [
   {
     label: "Տնակներ", url: "https://api.amaranoc.am/close_pool.svg",
   },
-  { label: "Փակ լողավազան", url:"https://api.amaranoc.am/close_pool.svg"},
-  { label: "Աղմուկից հեռու",  url: "https://api.amaranoc.am/far_from_noise.svg",},    
-  { label: "Շքեղ տեսարան",  url:"https://api.amaranoc.am/view.svg" },
-  { label: "Պահանջված", url:"https://api.amaranoc.am/nobel.svg" },
-  { label: "Լճի ափին", url:"https://api.amaranoc.am/along_lake.svg" },
-  { label: "Գետի ափին", url:"https://api.amaranoc.am/along_lake.svg" },
-  { label: "Դիզայն",  url:"https://api.amaranoc.am/designed.svg" },
-  { label: "Հյուրանոցներ", url:"https://api.amaranoc.am/hotel.svg" },
-  { label: "Նոր", url:"https://api.amaranoc.am/new.svg" },
-  { label: "Բնակարաններ", url:"https://api.amaranoc.am/house.svg" },
+  { label: "Փակ լողավազան", url: "https://api.amaranoc.am/close_pool.svg" },
+  { label: "Աղմուկից հեռու", url: "https://api.amaranoc.am/far_from_noise.svg", },
+  { label: "Շքեղ տեսարան", url: "https://api.amaranoc.am/view.svg" },
+  { label: "Պահանջված", url: "https://api.amaranoc.am/nobel.svg" },
+  { label: "Լճի ափին", url: "https://api.amaranoc.am/along_lake.svg" },
+  { label: "Գետի ափին", url: "https://api.amaranoc.am/along_lake.svg" },
+  { label: "Դիզայն", url: "https://api.amaranoc.am/designed.svg" },
+  { label: "Հյուրանոցներ", url: "https://api.amaranoc.am/hotel.svg" },
+  { label: "Նոր", url: "https://api.amaranoc.am/new.svg" },
+  { label: "Բնակարաններ", url: "https://api.amaranoc.am/house.svg" },
 ]
 export const dataBase = [
   {
@@ -42,6 +42,7 @@ export const dataBase = [
     bathroomCount: "3+",
     pool: "Առանց լողավազանի",
     title: "100,000 Դ",
+    qanak: 4
 
   },
   {
@@ -66,6 +67,8 @@ export const dataBase = [
     bathroomCount: "2",
     pool: "Առանց լողավազանի",
     title: "55,000 Դ",
+    qanak: 7
+
   },
   {
     id: 4,
@@ -90,6 +93,8 @@ export const dataBase = [
     pool: "Առանց լողավազանի",
 
     title: "45,000 Դ",
+    qanak: 3
+
   },
   {
     id: 1,
@@ -112,6 +117,8 @@ export const dataBase = [
     pool: "Առանց լողավազանի",
 
     title: "65,000 Դ",
+    qanak: 5
+
   },
   {
     id: 2,
@@ -123,6 +130,8 @@ export const dataBase = [
 
     description: "Արզական",
     title: "60,000",
+    qanak: 10
+
   },
   {
     id: 3,
@@ -134,6 +143,8 @@ export const dataBase = [
     image3:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1726751105740--0.02438617157514411image.webp&w=1920&q=75",
     title: "108,000 Դ",
+    qanak: 4
+
   },
   {
     id: 1,
@@ -146,6 +157,8 @@ export const dataBase = [
 
     description: "Դիլիջան",
     title: "25,000 Դ",
+    qanak: 5
+
   },
   {
     id: 2,
@@ -158,6 +171,8 @@ export const dataBase = [
 
     description: "Վանաձոր",
     title: "30,000",
+    qanak: 10
+
   },
   {
     id: 3,
@@ -170,38 +185,47 @@ export const dataBase = [
 
     description: "Թեղենիք",
     title: "25,000 Դ",
+    qanak: 8
+
   },
   {
     id: 1,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1718357206080--0.9650504930940831image.webp&w=1920&q=75",
     description: "Դիլիջան",
-    title: "50,000 ֏"
+    title: "50,000 ֏",
+    qanak: 11
+
   },
   {
     id: 2,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1718356722138--0.11008897457962119image.webp&w=1920&q=75",
     title: "50,000 ֏",
     description: "Դիլիջան",
-
+    qanak: 11
   },
   {
     id: 3,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1705568809908--0.18602545372675205image.webp&w=1920&q=75",
     description: "Երևան",
-    title: "35,000 ֏"
+    title: "35,000 ֏",
+    qanak: 4
+
   },
   {
     id: 1,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1738655037509--0.5071256793581231image.webp&w=1920&q=75",
     description: "Ձորաղբյուր",
-    title: "100,000 ֏"
+    title: "100,000 ֏",
+    qanak: 13
+
 
   },
   {
     id: 2,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1732616461236--0.6541537220629399image.webp&w=1920&q=75",
     description: "Ձորաղբյուր",
-    title: "150,000 ֏"
+    title: "150,000 ֏",
+    qanak: "13",
 
   },
   {
@@ -215,6 +239,8 @@ export const dataBase = [
 
     description: "Քասախ",
     title: "120,000 Դ",
+    qanak: "15"
+
   },
 ];
 

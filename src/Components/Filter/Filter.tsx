@@ -1,4 +1,4 @@
-  import React, { useState } from "react";
+  import React, {useEffect, useState } from "react";
   import { dataRegion } from "../Data/DataBase";
 
   interface Region {
@@ -14,9 +14,9 @@
   interface FilterProps {
     setMinPrice: React.Dispatch<React.SetStateAction<string>>;
     setMaxPrice: React.Dispatch<React.SetStateAction<string>>;
-    setSelectedRegions: React.Dispatch<React.SetStateAction<string[]>>; // ✅ Ավելացնում ենք
+    setSelectedRegions: React.Dispatch<React.SetStateAction<string[]>>;
+    setMinPeople: React.Dispatch<React.SetStateAction<number>>; // ✅ Ավելացրինք
   }
-
 
 
   const currencies: Currency[] = [
@@ -25,22 +25,33 @@
     { id: "rub", symbol: <i className="fa fa-ruble" style={{ fontSize: "16px" }}></i> },
   ];
 
-  const Filter: React.FC<FilterProps> = ({ setMinPrice, setMaxPrice, selectedRegions, setSelectedRegions }) => {
+  const Filter: React.FC<FilterProps> = ({  setMinPrice,
+    setMaxPrice,
+    selectedRegions,
+    setSelectedRegions,
+    setCount,
+    setCount2,
+    count,
+    count2, }) => {
+    const [localSelectedRegions, setLocalSelectedRegions] = useState<string[]>(selectedRegions);
 
-    const [count, setCount] = useState(0);
-    const [count2, setCount2] = useState(0);
 
     const [selected, setSelected] = useState<string>("Բոլորը");
     const [selectedCurrency, setSelectedCurrency] = useState<string | null>(null);
     const handleRegionChange = (regionName: string) => {
-      setSelectedRegions((prev) => {
-        const newRegions = prev.includes(regionName)
-          ? prev.filter((name) => name !== regionName)
-          : [...prev, regionName];
-    
+      setLocalSelectedRegions((prevRegions) => {
+        const newRegions = prevRegions.includes(regionName)
+          ? prevRegions.filter((name) => name !== regionName) // Հանում ենք
+          : [...prevRegions, regionName]; // Ավելացնում ենք
+  
+        console.log("Թարմացված տարածաշրջաններ:", newRegions);
         return newRegions;
       });
     };
+    useEffect(() => {
+      setSelectedRegions(localSelectedRegions);
+    }, [localSelectedRegions]);
+  
 
     return (
       <div className="w-[300px] flex flex-col space-y-4 lg:space-y-6 p-4 sm:p-6 lg:p-5 lg:rounded-2xl lg:border h-full overflow-y-auto lg:border-secondary-extra-light max-sm:pb-20">
@@ -110,10 +121,10 @@
               -
             </button>
             <p className="border border-gray-400 rounded-md px-5 py-2 w-[50px] text-center">{count}</p>
-            <button
-              className="bg-gray-300 w-[60px] h-[40px] rounded-[20px] flex justify-center items-center"
-              onClick={() => setCount((prev) => prev + 1)}
-            >
+              <button
+                className="bg-gray-300 w-[60px] h-[40px] rounded-[20px] flex justify-center items-center"
+                onClick={() => setCount((prev) => prev + 1)}
+              >
               +
             </button>
           </div>

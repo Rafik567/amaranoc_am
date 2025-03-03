@@ -11,38 +11,51 @@ import TopHeader from "../Header/TopHeader";
 const BodyAll = () => {
   const [minPrice, setMinPrice] = useState<string>("");
   const [maxPrice, setMaxPrice] = useState<string>("");
-  const [selectedRegions, setSelectedRegions] = useState<string[]>([]); // ✅ Ավելացնենք
+  const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
+  const [minPeople, setMinPeople] = useState<number>(0); // ✅ Նոր state մարդկանց քանակի համար
+  const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
 
   return (
     <>
-    <TopHeader/>
-    <div className="flex justify-evenly mt-[60px]">
-      <Filter
-        setMinPrice={setMinPrice}
-        setMaxPrice={setMaxPrice}
-        selectedRegions={selectedRegions}
-        setSelectedRegions={setSelectedRegions} // ✅ Ավելացվեց
-      />
-      <div>
-        <Map />
+      <TopHeader />
+      <div className="flex justify-evenly mt-[60px]">
+
+        <Filter
+          setMinPrice={setMinPrice}
+          setMaxPrice={setMaxPrice}
+          selectedRegions={selectedRegions}
+          setSelectedRegions={setSelectedRegions}
+          count={count} // ✅ Ավելացրու սա
+          setCount={setCount} // ✅ Ավելացրու սա
+          count2={count2} // ✅ Ավելացրու սա
+          setCount2={setCount2} // ✅ Ավելացրու սա
+        />
+
         <div>
-          <HomeAll />
-        </div>
-        <div className="mt-[50px]">
-          <BestOffers
-            minPrice={minPrice}
-            maxPrice={maxPrice}
-            selectedRegions={selectedRegions}
-          />
-          <Regular minPrice={minPrice}
-            maxPrice={maxPrice}
-            selectedRegions={selectedRegions} />
+          <Map />
+          <div>
+            <HomeAll />
+          </div>
+          <div className="mt-[50px]">
+            <BestOffers
+              minPrice={minPrice}
+              maxPrice={maxPrice}
+              selectedRegions={selectedRegions}
+              count={count} // ✅ Ավելացրինք count-ը
+            />
+
+            <Regular
+              minPrice={minPrice}
+              maxPrice={maxPrice}
+              selectedRegions={selectedRegions}
+            />
+          </div>
         </div>
       </div>
-    </div>
-      <Post/>
-      <Footer/>
-      </>
+      <Post />
+      <Footer />
+    </>
   );
 };
 

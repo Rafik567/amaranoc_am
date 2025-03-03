@@ -72,6 +72,7 @@ const Carayutyuner: React.FC = () => {
       </div>
 
       <Post/>
+      <Footer/>
     </>
   );
 };
