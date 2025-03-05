@@ -19,38 +19,69 @@ interface BestOffersProps {
   maxPrice: string;
   selectedRegions: string[];
   count: number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
+  searchQuery: string; // Ավելացնել նոր prop searchQuery
 }
 
-const BestOffers: React.FC<BestOffersProps> = ({ minPrice, maxPrice, selectedRegions, count }) => {
-  const [filteredOffers, setFilteredOffers] = useState<Offer[]>(dataBase); 
+interface Offer {
+  id: number;
+  title: string;
+  description: string;
+  image1: string;
+  image2: string;
+  image3: string;
+  qanak: string;
+}
+
+interface BestOffersProps {
+  minPrice: string;
+  maxPrice: string;
+  selectedRegions: string[];
+  count: number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
+  searchQuery: string;
+}
+const BestOffers: React.FC<BestOffersProps> = ({
+  minPrice,
+  maxPrice,
+  selectedRegions,
+  count,
+  setCount,
+  searchQuery,
+}) => {
+  const [filteredOffers, setFilteredOffers] = useState<Offer[]>(dataBase);
 
   useEffect(() => {
-    console.log("Ֆիլտրի փոփոխություն:", { count });
-  
-    
-    let newFilteredOffers = [...dataBase]; 
-  
-    if (count !== 0) {
-      newFilteredOffers = newFilteredOffers.filter((offer) => {
-        const offerCount = parseInt(offer.qanak, 10);
-        console.log(`Offer: ${offer.description}, qanak: ${offer.qanak}, Parsed: ${offerCount}, Count: ${count}`);
-  
-        return count === offerCount;
-      });
-    }
-  
+    let newFilteredOffers = [...dataBase];
+
+    newFilteredOffers = newFilteredOffers.filter((offer) => {
+      const price = parseInt(offer.title.replace(/\D/g, ""), 10);
+      const min = minPrice ? parseInt(minPrice, 10) : 0;
+      const max = maxPrice ? parseInt(maxPrice, 10) : Infinity;
+      const matchesRegion = selectedRegions.length === 0 || selectedRegions.some(region => offer.description.includes(region));
+      const offerCount = Number(offer.qanak);
+      const matchesCount = count === 0 || count === offerCount;
+
+      const matchesSearchQuery = searchQuery 
+        ? offer.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          offer.title.toLowerCase().includes(searchQuery.toLowerCase())
+        : true;
+
+      return price >= min && price <= max && matchesRegion && matchesCount && matchesSearchQuery;
+    });
+
     setFilteredOffers(newFilteredOffers);
-  }, [count]); 
-  
+  }, [minPrice, maxPrice, selectedRegions, count, searchQuery]);  // Ճիշտ կախվածություն
+
   return (
-    <>
+    <div className="best-offers-container">
       <div className="flex items-center justify-between pb-3 border-b border-b-secondary-thin pr-4 md:pr-0">
         <p className="text-secondary text-text2_bold sm:text-text1">Լավագույն առաջարկներ</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {filteredOffers.length > 0 ? (
-          filteredOffers.map((offer: Offer) => (
+          filteredOffers.map((offer) => (
             <div key={offer.id} className="border w-[500px] rounded-lg shadow-lg p-4">
               <div className="relative w-full h-48">
                 <Slider dots infinite={false} speed={500} slidesToShow={1} slidesToScroll={1}>
@@ -73,8 +104,8 @@ const BestOffers: React.FC<BestOffersProps> = ({ minPrice, maxPrice, selectedReg
           <p>Չկան առաջարկներ</p>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
-export default BestOffers;
+export default BestOffers; 

@@ -1,35 +1,38 @@
 import React, { useState } from "react";
 import Filter from "../Filter/Filter";
-import HomeAll from "../Home/HomeAll";
+// import HomeAll from "../Home/HomeAll";
 import Map from "../Map/Map";
 import BestOffers from "../OfferDetails/BestOffers";
 import Regular from "../RegularDetails/Regular";
 import Post from "../Post/Post";
 import Footer from "../Footer/Footer";
 import TopHeader from "../Header/TopHeader";
-
+import HomeAll from "../Home/HomeAll"
 const BodyAll = () => {
-  const [minPrice, setMinPrice] = useState<string>("");
-  const [maxPrice, setMaxPrice] = useState<string>("");
+  const [minPrice, setMinPrice] = useState<string>("0");
+  const [maxPrice, setMaxPrice] = useState<string>("999999");
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
-  const [minPeople, setMinPeople] = useState<number>(0); // ✅ Նոր state մարդկանց քանակի համար
-  const [count, setCount] = useState(0);
-  const [count2, setCount2] = useState(0);
+  const [count, setCount] = useState<number>(0);
+  const [count2, setCount2] = useState<number>(0);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);  // Փոխանցում ենք searchQuery-ը
+  };
 
   return (
     <>
-      <TopHeader />
+      <TopHeader onSearch={handleSearch} />  {/* Փոխանցում ենք onSearch */}
       <div className="flex justify-evenly mt-[60px]">
-
         <Filter
           setMinPrice={setMinPrice}
           setMaxPrice={setMaxPrice}
           selectedRegions={selectedRegions}
           setSelectedRegions={setSelectedRegions}
-          count={count} // ✅ Ավելացրու սա
-          setCount={setCount} // ✅ Ավելացրու սա
-          count2={count2} // ✅ Ավելացրու սա
-          setCount2={setCount2} // ✅ Ավելացրու սա
+          setCount={setCount}
+          setCount2={setCount2}
+          count={count}
+          count2={count2}
         />
 
         <div>
@@ -42,13 +45,15 @@ const BodyAll = () => {
               minPrice={minPrice}
               maxPrice={maxPrice}
               selectedRegions={selectedRegions}
-              count={count} // ✅ Ավելացրինք count-ը
+              count={count}
+              searchQuery={searchQuery}  
             />
-
             <Regular
               minPrice={minPrice}
               maxPrice={maxPrice}
               selectedRegions={selectedRegions}
+              count={count}
+              searchQuery={searchQuery}  
             />
           </div>
         </div>
@@ -58,5 +63,6 @@ const BodyAll = () => {
     </>
   );
 };
+
 
 export default BodyAll;

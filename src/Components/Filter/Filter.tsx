@@ -14,9 +14,14 @@
   interface FilterProps {
     setMinPrice: React.Dispatch<React.SetStateAction<string>>;
     setMaxPrice: React.Dispatch<React.SetStateAction<string>>;
+    selectedRegions: string[];
     setSelectedRegions: React.Dispatch<React.SetStateAction<string[]>>;
-    setMinPeople: React.Dispatch<React.SetStateAction<number>>; // ✅ Ավելացրինք
-  }
+    setCount: React.Dispatch<React.SetStateAction<number>>;
+    setCount2: React.Dispatch<React.SetStateAction<number>>;
+    count: number;
+    count2: number;
+}
+
 
 
   const currencies: Currency[] = [
@@ -41,8 +46,8 @@
     const handleRegionChange = (regionName: string) => {
       setLocalSelectedRegions((prevRegions) => {
         const newRegions = prevRegions.includes(regionName)
-          ? prevRegions.filter((name) => name !== regionName) // Հանում ենք
-          : [...prevRegions, regionName]; // Ավելացնում ենք
+          ? prevRegions.filter((name) => name !== regionName) 
+          : [...prevRegions, regionName]; 
   
         console.log("Թարմացված տարածաշրջաններ:", newRegions);
         return newRegions;
@@ -89,7 +94,7 @@
             ))}
           </div>
 
-        </div>
+        </div>  
         <div className="flex items-center space-x-2">
           <label className="relative flex flex-col px-4 py-3 rounded-lg border border-secondary-extra-light">
             <input

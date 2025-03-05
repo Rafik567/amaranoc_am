@@ -42,7 +42,8 @@ export const dataBase = [
     bathroomCount: "3+",
     pool: "Առանց լողավազանի",
     title: "100,000 Դ",
-    qanak: 4
+    qanak: 4,
+    text:"Առանձնատուն"
 
   },
   {
@@ -67,7 +68,8 @@ export const dataBase = [
     bathroomCount: "2",
     pool: "Առանց լողավազանի",
     title: "55,000 Դ",
-    qanak: 7
+    qanak: 7,
+    text:""
 
   },
   {
@@ -93,7 +95,8 @@ export const dataBase = [
     pool: "Առանց լողավազանի",
 
     title: "45,000 Դ",
-    qanak: 3
+    qanak: 3,
+    text:"Այո"
 
   },
   {
@@ -143,7 +146,8 @@ export const dataBase = [
     image3:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1726751105740--0.02438617157514411image.webp&w=1920&q=75",
     title: "108,000 Դ",
-    qanak: 4
+    qanak: 4,
+    text:"Այո"
 
   },
   {
@@ -157,7 +161,8 @@ export const dataBase = [
 
     description: "Դիլիջան",
     title: "25,000 Դ",
-    qanak: 5
+    qanak: 5,
+    text:"Այո"
 
   },
   {
@@ -171,7 +176,8 @@ export const dataBase = [
 
     description: "Վանաձոր",
     title: "30,000",
-    qanak: 10
+    qanak: 10,
+    text:"Այո"
 
   },
   {
@@ -226,6 +232,7 @@ export const dataBase = [
     description: "Ձորաղբյուր",
     title: "150,000 ֏",
     qanak: "13",
+    text:"Այո"
 
   },
   {
@@ -239,7 +246,8 @@ export const dataBase = [
 
     description: "Քասախ",
     title: "120,000 Դ",
-    qanak: "15"
+    qanak: "15",
+    text:"Այո"
 
   },
 ];
@@ -259,6 +267,7 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     description: "Դիլիջան",
     title: "50,000 Դ",
+    qanak:2
   },
   {
     id: 2,
@@ -272,6 +281,7 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     description: "Փարպի",
     title: "100,000 Դ",
+    qanak:4
   },
   {
     id: 3,
@@ -285,6 +295,8 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     description: "Աբովյան",
     title: "55,000 Դ",
+    qanak:3
+
   },
   {
     id: 2,
@@ -299,6 +311,7 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
 
     description: "Ակունք",
+    qanak:2
   },
   {
     id: 3,
@@ -312,6 +325,7 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "150,000 Դ",
     description: "Արզնի",
+    qanak:5
   },
   {
     id: 4,
@@ -325,6 +339,7 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "130,000 Դ",
     description: "Ծաղկաձոր",
+    qanak:6
   },
   {
     id: 1,
@@ -338,6 +353,7 @@ export let dataBase2 = [
     image4:
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "90,000 Դ",
+    qanak:8
   },
   {
     id: 2,
@@ -351,6 +367,7 @@ export let dataBase2 = [
     image4:
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "100,000 Դ",
+    qanak:6
   },
   {
     id: 3,
@@ -364,6 +381,7 @@ export let dataBase2 = [
     image4:
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "80,000 Դ",
+    qanak:10
   },
   {
     id: 1,
@@ -377,6 +395,7 @@ export let dataBase2 = [
     image4:
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "100,000 Դ",
+    qanak:9
   },
   {
     id: 2,
@@ -390,6 +409,7 @@ export let dataBase2 = [
     image4:
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "100,000 Դ",
+    qanak:11
   },
 
 ];
