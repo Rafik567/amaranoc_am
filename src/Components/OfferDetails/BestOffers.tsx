@@ -12,25 +12,7 @@ interface Offer {
   image2: string;
   image3: string;
   qanak: string;
-}
-
-interface BestOffersProps {
-  minPrice: string;
-  maxPrice: string;
-  selectedRegions: string[];
-  count: number;
-  setCount: React.Dispatch<React.SetStateAction<number>>;
-  searchQuery: string; // Ավելացնել նոր prop searchQuery
-}
-
-interface Offer {
-  id: number;
-  title: string;
-  description: string;
-  image1: string;
-  image2: string;
-  image3: string;
-  qanak: string;
+  text?: string; // ավելացնենք, որ կարող է չլինել
 }
 
 interface BestOffersProps {
@@ -40,7 +22,9 @@ interface BestOffersProps {
   count: number;
   setCount: React.Dispatch<React.SetStateAction<number>>;
   searchQuery: string;
+  selectedCategory: string; // Ավելացված prop
 }
+
 const BestOffers: React.FC<BestOffersProps> = ({
   minPrice,
   maxPrice,
@@ -48,6 +32,7 @@ const BestOffers: React.FC<BestOffersProps> = ({
   count,
   setCount,
   searchQuery,
+  selectedCategory,
 }) => {
   const [filteredOffers, setFilteredOffers] = useState<Offer[]>(dataBase);
 
@@ -55,23 +40,38 @@ const BestOffers: React.FC<BestOffersProps> = ({
     let newFilteredOffers = [...dataBase];
 
     newFilteredOffers = newFilteredOffers.filter((offer) => {
+      // Թիվային ֆիլտրում՝ ընդունելու համար՝ title-ում պարունակվող թվերը
       const price = parseInt(offer.title.replace(/\D/g, ""), 10);
       const min = minPrice ? parseInt(minPrice, 10) : 0;
       const max = maxPrice ? parseInt(maxPrice, 10) : Infinity;
-      const matchesRegion = selectedRegions.length === 0 || selectedRegions.some(region => offer.description.includes(region));
+      const matchesRegion =
+        selectedRegions.length === 0 ||
+        selectedRegions.some((region) => offer.description.includes(region));
       const offerCount = Number(offer.qanak);
       const matchesCount = count === 0 || count === offerCount;
 
-      const matchesSearchQuery = searchQuery 
-        ? offer.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          offer.title.toLowerCase().includes(searchQuery.toLowerCase())
+      const matchesSearchQuery = searchQuery
+        ? offer.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          offer.description.toLowerCase().includes(searchQuery.toLowerCase())
         : true;
 
-      return price >= min && price <= max && matchesRegion && matchesCount && matchesSearchQuery;
+      // Ֆիլտրում ըստ կատեգորիայի՝ օգտագործելով offer.text, եթե կա
+      const matchesCategory = selectedCategory
+        ? offer.text && offer.text.toLowerCase().includes(selectedCategory.toLowerCase())
+        : true;
+
+      return (
+        price >= min &&
+        price <= max &&
+        matchesRegion &&
+        matchesCount &&
+        matchesSearchQuery &&
+        matchesCategory
+      );
     });
 
     setFilteredOffers(newFilteredOffers);
-  }, [minPrice, maxPrice, selectedRegions, count, searchQuery]);  // Ճիշտ կախվածություն
+  }, [minPrice, maxPrice, selectedRegions, count, searchQuery, selectedCategory]);
 
   return (
     <div className="best-offers-container">
@@ -85,9 +85,21 @@ const BestOffers: React.FC<BestOffersProps> = ({
             <div key={offer.id} className="border w-[500px] rounded-lg shadow-lg p-4">
               <div className="relative w-full h-48">
                 <Slider dots infinite={false} speed={500} slidesToShow={1} slidesToScroll={1}>
-                  <img src={offer.image1} className="rounded-lg object-cover w-full h-48" alt={offer.description} />
-                  <img src={offer.image2} className="rounded-lg object-cover w-full h-48" alt={offer.description} />
-                  <img src={offer.image3} className="rounded-lg object-cover w-full h-48" alt={offer.description} />
+                  <img
+                    src={offer.image1}
+                    className="rounded-lg object-cover w-full h-48"
+                    alt={offer.description}
+                  />
+                  <img
+                    src={offer.image2}
+                    className="rounded-lg object-cover w-full h-48"
+                    alt={offer.description}
+                  />
+                  <img
+                    src={offer.image3}
+                    className="rounded-lg object-cover w-full h-48"
+                    alt={offer.description}
+                  />
                 </Slider>
               </div>
               <div className="flex gap-[20px]">
@@ -101,11 +113,11 @@ const BestOffers: React.FC<BestOffersProps> = ({
             </div>
           ))
         ) : (
-          <p>Չկան առաջարկներ</p>
+          <p>Երազանքներ չգտնվեցին։</p>
         )}
       </div>
     </div>
   );
 };
 
-export default BestOffers; 
+export default BestOffers;

@@ -43,7 +43,7 @@ export const dataBase = [
     pool: "Առանց լողավազանի",
     title: "100,000 Դ",
     qanak: 4,
-    text:"Առանձնատուն"
+    text:"Առանձնատներ"
 
   },
   {
@@ -69,7 +69,7 @@ export const dataBase = [
     pool: "Առանց լողավազանի",
     title: "55,000 Դ",
     qanak: 7,
-    text:""
+    text:"Առանձնատներ"
 
   },
   {
@@ -96,13 +96,13 @@ export const dataBase = [
 
     title: "45,000 Դ",
     qanak: 3,
-    text:"Այո"
-
+    text:"Փակ լողավազան"
+    
   },
   {
     id: 1,
     image1:
-      "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1736262949713--0.5438384878532811image.webp&w=1920&q=75",
+    "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1736262949713--0.5438384878532811image.webp&w=1920&q=75",
     image2:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1736262949768--0.08914733028584676image.webp&w=1920&q=75",
     image3:
@@ -118,22 +118,24 @@ export const dataBase = [
     roomCount: "4",
     bathroomCount: "2",
     pool: "Առանց լողավազանի",
-
+    
     title: "65,000 Դ",
-    qanak: 5
-
+    qanak: 5,
+    text:"Փակ լողավազան"
+    
   },
   {
     id: 2,
     image1:
-      "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735309341998--0.18031243054065027image.webp&w=1920&q=75",
+    "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735309341998--0.18031243054065027image.webp&w=1920&q=75",
     image2:
-      "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1737545409557--0.3434726795825285image.webp&w=1920&q=75",
+    "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1737545409557--0.3434726795825285image.webp&w=1920&q=75",
     image3: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735139871491--0.7825226005490338image.webp&w=1920&q=75",
-
+    
     description: "Արզական",
     title: "60,000",
-    qanak: 10
+    qanak: 10,
+    text:"Առանձնատներ"
 
   },
   {
@@ -147,7 +149,7 @@ export const dataBase = [
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1726751105740--0.02438617157514411image.webp&w=1920&q=75",
     title: "108,000 Դ",
     qanak: 4,
-    text:"Այո"
+    text:"Frame houses"
 
   },
   {
@@ -162,7 +164,7 @@ export const dataBase = [
     description: "Դիլիջան",
     title: "25,000 Դ",
     qanak: 5,
-    text:"Այո"
+    text:"Առանձնատներ"
 
   },
   {
@@ -177,7 +179,8 @@ export const dataBase = [
     description: "Վանաձոր",
     title: "30,000",
     qanak: 10,
-    text:"Այո"
+    text:"Frame houses"
+
 
   },
   {
@@ -191,7 +194,9 @@ export const dataBase = [
 
     description: "Թեղենիք",
     title: "25,000 Դ",
-    qanak: 8
+    qanak: 8,
+    text:"Frame houses"
+
 
   },
   {
@@ -199,7 +204,8 @@ export const dataBase = [
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1718357206080--0.9650504930940831image.webp&w=1920&q=75",
     description: "Դիլիջան",
     title: "50,000 ֏",
-    qanak: 11
+    qanak: 11,
+    text:"Տնակներ"
 
   },
   {
@@ -207,14 +213,17 @@ export const dataBase = [
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1718356722138--0.11008897457962119image.webp&w=1920&q=75",
     title: "50,000 ֏",
     description: "Դիլիջան",
-    qanak: 11
+    qanak: 11,
+    text:"Տնակներ"
   },
   {
     id: 3,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1705568809908--0.18602545372675205image.webp&w=1920&q=75",
     description: "Երևան",
     title: "35,000 ֏",
-    qanak: 4
+    qanak: 4,
+    text:"Աղմուկից հեռու"
+
 
   },
   {
@@ -222,7 +231,9 @@ export const dataBase = [
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1738655037509--0.5071256793581231image.webp&w=1920&q=75",
     description: "Ձորաղբյուր",
     title: "100,000 ֏",
-    qanak: 13
+    qanak: 13,
+    text:"Փակ լողավազան"
+
 
 
   },
@@ -232,7 +243,8 @@ export const dataBase = [
     description: "Ձորաղբյուր",
     title: "150,000 ֏",
     qanak: "13",
-    text:"Այո"
+    text:"Տնակներ"
+
 
   },
   {
@@ -247,7 +259,8 @@ export const dataBase = [
     description: "Քասախ",
     title: "120,000 Դ",
     qanak: "15",
-    text:"Այո"
+    text:"Տնակներ "
+
 
   },
 ];
@@ -267,7 +280,8 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     description: "Դիլիջան",
     title: "50,000 Դ",
-    qanak:2
+    qanak:2,
+    text:"Աղմուկից հեռու"
   },
   {
     id: 2,
@@ -281,7 +295,8 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     description: "Փարպի",
     title: "100,000 Դ",
-    qanak:4
+    qanak:4,
+    text:"Շքեղ տեսարան"
   },
   {
     id: 3,
@@ -295,7 +310,8 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     description: "Աբովյան",
     title: "55,000 Դ",
-    qanak:3
+    qanak:3,
+    text:"Պահանջված"
 
   },
   {
@@ -311,7 +327,8 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
 
     description: "Ակունք",
-    qanak:2
+    qanak:2,
+    text:"Աղմուկից հեռու"
   },
   {
     id: 3,
@@ -325,7 +342,8 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "150,000 Դ",
     description: "Արզնի",
-    qanak:5
+    qanak:5,
+    text:"Շքեղ տեսարան"
   },
   {
     id: 4,
@@ -339,7 +357,8 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "130,000 Դ",
     description: "Ծաղկաձոր",
-    qanak:6
+    qanak:6,
+    text:"Պահանջված"
   },
   {
     id: 1,
@@ -353,7 +372,8 @@ export let dataBase2 = [
     image4:
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "90,000 Դ",
-    qanak:8
+    qanak:8,
+    text:"Լճի ափին"
   },
   {
     id: 2,
@@ -367,7 +387,8 @@ export let dataBase2 = [
     image4:
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "100,000 Դ",
-    qanak:6
+    qanak:6,
+    text:"Պահանջված"
   },
   {
     id: 3,
@@ -381,7 +402,8 @@ export let dataBase2 = [
     image4:
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "80,000 Դ",
-    qanak:10
+    qanak:10,
+    text:"Շքեղ տեսարան"
   },
   {
     id: 1,
@@ -395,7 +417,8 @@ export let dataBase2 = [
     image4:
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "100,000 Դ",
-    qanak:9
+    qanak:9,
+    text:"Լճի ափին"
   },
   {
     id: 2,
@@ -409,7 +432,8 @@ export let dataBase2 = [
     image4:
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "100,000 Դ",
-    qanak:11
+    qanak:11,
+    text:""
   },
 
 ];

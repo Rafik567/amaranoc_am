@@ -15,6 +15,7 @@ const BodyAll = () => {
   const [count, setCount] = useState<number>(0);
   const [count2, setCount2] = useState<number>(0);
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);  // Փոխանցում ենք searchQuery-ը
@@ -38,7 +39,7 @@ const BodyAll = () => {
         <div>
           <Map />
           <div>
-            <HomeAll />
+            <HomeAll  setSelectedCategory={setSelectedCategory}  />
           </div>
           <div className="mt-[50px]">
             <BestOffers
@@ -47,6 +48,7 @@ const BodyAll = () => {
               selectedRegions={selectedRegions}
               count={count}
               searchQuery={searchQuery}  
+              selectedCategory={selectedCategory}
             />
             <Regular
               minPrice={minPrice}
@@ -54,6 +56,8 @@ const BodyAll = () => {
               selectedRegions={selectedRegions}
               count={count}
               searchQuery={searchQuery}  
+              selectedCategory={selectedCategory}
+
             />
           </div>
         </div>
