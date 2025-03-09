@@ -392,7 +392,16 @@ export let dataBase2 = [
     description: "Դիլիջան",
     title: "50,000 Դ",
     qanak:2,
-    text:"Աղմուկից հեռու"
+    text:"Աղմուկից հեռու",
+    code: "AM020",
+    address: "Թեղուտ",
+    overnight: "Այո",
+    buildingArea: "130 քմ",
+    totalArea: "700 քմ",
+    peopleCount: "14",
+    overnightCount: "12",
+    roomCount: "4",
+    pool: "Բաց, Փակ, Տաքացվող",
   },
   {
     id: 2,
@@ -407,7 +416,16 @@ export let dataBase2 = [
     description: "Փարպի",
     title: "100,000 Դ",
     qanak:4,
-    text:"Շքեղ տեսարան"
+    text:"Շքեղ տեսարան",
+    code: "AM345",
+    address: "Փարփի",
+    overnight: "Այո",
+    buildingArea: "75 քմ",
+    totalArea: "1000 քմ",
+    peopleCount: "40",
+    overnightCount: "8",
+    roomCount: "4",
+    pool: "Բաց",
   },
   {
     id: 3,
@@ -422,11 +440,20 @@ export let dataBase2 = [
     description: "Աբովյան",
     title: "55,000 Դ",
     qanak:3,
-    text:"Պահանջված"
+    text:"Պահանջված",
+    code: "AM140",
+    address: "5-րդ միկրոշրջան",
+    overnight: "Ոչ",
+    buildingArea: "600 քմ",
+    totalArea: "200 քմ",
+    peopleCount: "25",
+    overnightCount: "1",
+    roomCount: "1",
+    pool: "Փակ",
 
   },
   {
-    id: 2,
+    id: 4,
     title: "90,000 Դ",
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735922464540--0.9832742505384362image.webp&w=1920&q=75",
@@ -439,10 +466,20 @@ export let dataBase2 = [
 
     description: "Ակունք",
     qanak:2,
-    text:"Աղմուկից հեռու"
+    text:"Աղմուկից հեռու",
+    code: "AM030",
+    address: "Ակունք 25-րդ փողոց",
+    overnight: "Այո",
+    buildingArea: "230 քմ",
+    totalArea: "500 քմ",
+    peopleCount: "35",
+    overnightCount: "10",
+    roomCount: "5",
+    pool: "Բաց",
+
   },
   {
-    id: 3,
+    id: 5,
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1719483738178--0.17939100328131374image.webp&w=1920&q=75",
     image2:
@@ -454,10 +491,20 @@ export let dataBase2 = [
     title: "150,000 Դ",
     description: "Արզնի",
     qanak:5,
-    text:"Շքեղ տեսարան"
+    text:"Շքեղ տեսարան",
+    code: "AM239",
+    address: "Արզնի",
+    overnight: "Այո",
+    buildingArea: "550 քմ",
+    totalArea: "1200 քմ",
+    peopleCount: "50",
+    overnightCount: "11",
+    roomCount: "4",
+    pool: "Փակ, Տաքացվող",
+
   },
   {
-    id: 4,
+    id: 6,
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1727006467456--0.9643954207029866image.webp&w=1920&q=75",
     image2:
@@ -469,10 +516,20 @@ export let dataBase2 = [
     title: "130,000 Դ",
     description: "Ծաղկաձոր",
     qanak:6,
-    text:"Պահանջված"
+    text:"Պահանջված",
+    code: "AM166",
+    address: "Ծաղկաձոր",
+    overnight: "Այո",
+    buildingArea: "500 քմ",
+    totalArea: "250 քմ",
+    peopleCount: "30",
+    overnightCount: "14",
+    roomCount: "6 և ավելի",
+    pool: "Փակ",
+
   },
   {
-    id: 1,
+    id: 7,
     description: "Բջնի",
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1718982997805--0.5443030491298497image.webp&w=1920&q=75",
@@ -484,10 +541,20 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "90,000 Դ",
     qanak:8,
-    text:"Լճի ափին"
+    text:"Լճի ափին",
+    code: "AM142",
+    address: "Բջնի",
+    overnight: "Այո",
+    buildingArea: "561 քմ",
+    totalArea: "250 քմ",
+    peopleCount: "25",
+    overnightCount: "9",
+    roomCount: "3",
+    pool: "Փակ,Տաքացվող",
+
   },
   {
-    id: 2,
+    id: 8,
     description: "Պտղնի",
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1733690961413--0.3657082475795794image.webp&w=1920&q=75",
@@ -499,10 +566,20 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "100,000 Դ",
     qanak:6,
-    text:"Պահանջված"
+    text:"Պահանջված",
+    code: "AM062",
+    address: "Պտղնի",
+    overnight: "Այո",
+    buildingArea: "200 քմ",
+    totalArea: "650 քմ",
+    peopleCount: "30",
+    overnightCount: "10",
+    roomCount: "3",
+    pool: "Փակ,Տաքացվող",
+
   },
   {
-    id: 3,
+    id: 9,
     description: "Օհանավան",
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1712567462741--0.9299629007114927image.webp&w=1920&q=75",
@@ -514,10 +591,19 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "80,000 Դ",
     qanak:10,
-    text:"Շքեղ տեսարան"
+    text:"Շքեղ տեսարան",
+    code: "AM274",
+    address: "Օհանավան",
+    overnight: "Այո",
+    buildingArea: "400  քմ",
+    totalArea: "1000 քմ",
+    peopleCount: "30",
+    overnightCount: "8",
+    roomCount: "3",
+    pool: "Բաց, Փակ, Տաքացվող"
   },
   {
-    id: 1,
+    id: 10,
     description: "Ծաղկաձոր",
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1726755455709--0.42990686786537236image.webp&w=1920&q=75",
@@ -529,10 +615,19 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "100,000 Դ",
     qanak:9,
-    text:"Լճի ափին"
+    text:"Լճի ափին",
+    code: "AM165",
+    address: "Ծաղկաձոր",
+    overnight: "Այո",
+    buildingArea: "500 քմ",
+    totalArea: "250 քմ",
+    peopleCount: "15",
+    overnightCount: "9",
+    roomCount: "3",
+    pool: "Փակ,Տաքացվող",
   },
   {
-    id: 2,
+    id: 11,
     description: "Օհանավան",
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1720431645306--0.9258848613459756image.webp&w=1920&q=75",
@@ -544,7 +639,16 @@ export let dataBase2 = [
       "https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_1280.png",
     title: "100,000 Դ",
     qanak:11,
-    text:""
+    text:"Frame houses",
+    code: "AM274",
+    address: "Օհանավան",
+    overnight: "Այո",
+    buildingArea: "400 քմ",
+    totalArea: "1000 քմ",
+    peopleCount: "30",
+    overnightCount: "8",
+    roomCount: "3",
+    pool: "Բաց, Փակ, Տաքացվող",
   },
 
 ];
