@@ -373,7 +373,6 @@ export const dataBase = [
     roomCount: "1",
     pool: "Փակ, Տաքացվող",
 
-
   },
 ];
 
