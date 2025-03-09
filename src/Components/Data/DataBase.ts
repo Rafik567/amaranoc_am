@@ -21,7 +21,7 @@ export let data = [
 ]
 export const dataBase = [
   {
-    id: 2,
+    id: 1,
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1736346552283--0.4154739994823833image.webp&w=1920&q=75",
     image2:
@@ -44,6 +44,31 @@ export const dataBase = [
     title: "100,000 Դ",
     qanak: 4,
     text:"Առանձնատներ"
+
+  },
+  {
+    id: 2,
+    image1:
+    "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735309341998--0.18031243054065027image.webp&w=1920&q=75",
+    image2:
+    "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1737545409557--0.3434726795825285image.webp&w=1920&q=75",
+    image3: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735139871491--0.7825226005490338image.webp&w=1920&q=75",
+    
+    description: "Արզական",
+    title: "60,000",
+    qanak: 10,
+    text:"Առանձնատներ",
+    code: "AM341",
+    address: "Բարեկամության փողոց",
+    overnight: "Այո",
+    buildingArea: "80 քմ",
+    totalArea: "1600 քմ",
+    peopleCount: "10",
+    overnightCount: "10",
+    roomCount: "5",
+    bathroomCount: "3+",
+    pool: "Առանց լողավազանի",
+    
 
   },
   {
@@ -100,7 +125,7 @@ export const dataBase = [
     
   },
   {
-    id: 1,
+    id: 5,
     image1:
     "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1736262949713--0.5438384878532811image.webp&w=1920&q=75",
     image2:
@@ -124,22 +149,9 @@ export const dataBase = [
     text:"Փակ լողավազան"
     
   },
+ 
   {
-    id: 2,
-    image1:
-    "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735309341998--0.18031243054065027image.webp&w=1920&q=75",
-    image2:
-    "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1737545409557--0.3434726795825285image.webp&w=1920&q=75",
-    image3: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735139871491--0.7825226005490338image.webp&w=1920&q=75",
-    
-    description: "Արզական",
-    title: "60,000",
-    qanak: 10,
-    text:"Առանձնատներ"
-
-  },
-  {
-    id: 3,
+    id: 6,
     description: "Նօր Հաճն",
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1712326262412--0.25440242535580326image.webp&w=1920&q=75",
@@ -149,11 +161,21 @@ export const dataBase = [
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1726751105740--0.02438617157514411image.webp&w=1920&q=75",
     title: "108,000 Դ",
     qanak: 4,
-    text:"Frame houses"
+    text:"Frame houses",
+    code: "AM063",
+    address: "Նոր Հաճն",
+    overnight: "Այո",
+    buildingArea: "1500 քմ",
+    totalArea: "340 քմ",
+    peopleCount: "25",
+    overnightCount: "16",
+    roomCount: "6 և ավելի",
+    bathroomCount: "3+",
+    pool: "Բաց, Փակ, Տաքացվող",
 
   },
   {
-    id: 1,
+    id: 7,
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735305286415--0.799977604430975image.webp&w=1920&q=75",
     image2:
@@ -164,11 +186,22 @@ export const dataBase = [
     description: "Դիլիջան",
     title: "25,000 Դ",
     qanak: 5,
-    text:"Առանձնատներ"
+    text:"Առանձնատներ",
+    code: "AM347",
+    address: "Դիլիջան",
+    overnight: "Այո",
+    buildingArea: "120 քմ",
+    totalArea: "120 քմ",
+    peopleCount: "8",
+    overnightCount: "8",
+    roomCount: "4",
+    bathroomCount: "1",
+    pool: "Առանց լողավազանի",
+
 
   },
   {
-    id: 2,
+    id: 8,
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735302502215--0.230355006263677image.webp&w=1920&q=75",
     image2:
@@ -179,12 +212,22 @@ export const dataBase = [
     description: "Վանաձոր",
     title: "30,000",
     qanak: 10,
-    text:"Frame houses"
+    text:"Frame houses",
+    code: "AM347",
+    address: "Դիլիջան",
+    overnight: "Այո",
+    buildingArea: "120 քմ",
+    totalArea: "120 քմ",
+    peopleCount: "8",
+    overnightCount: "8",
+    roomCount: "4",
+    bathroomCount: "1",
+    pool: "Առանց լողավազանի",
 
 
   },
   {
-    id: 3,
+    id: 9,
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735210751295--0.852475450909614image.webp&w=1920&q=75",
     image2:
@@ -195,60 +238,120 @@ export const dataBase = [
     description: "Թեղենիք",
     title: "25,000 Դ",
     qanak: 8,
-    text:"Frame houses"
+    text:"Frame houses",
+    code: "AM346",
+    address: "Արջուտ",
+    overnight: "Այո",
+    buildingArea: "42 քմ",
+    totalArea: "1200 քմ",
+    peopleCount: "6",
+    overnightCount: "6",
+    roomCount: "2",
+    bathroomCount: "1",
+    pool: "Առանց լողավազանի",
 
 
   },
   {
-    id: 1,
+    id: 10,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1718357206080--0.9650504930940831image.webp&w=1920&q=75",
     description: "Դիլիջան",
     title: "50,000 ֏",
     qanak: 11,
-    text:"Տնակներ"
+    text:"Տնակներ",
+    code: "AM256",
+    address: "Դիլիջան",
+    overnight: "Այո",
+    buildingArea: "108 քմ",
+    totalArea: "300 քմ",
+    peopleCount: "6",
+    overnightCount: "6",
+    roomCount: "2",
+    bathroomCount: "1",
+    pool: "Առանց լողավազանի",
 
   },
   {
-    id: 2,
+    id: 11,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1718356722138--0.11008897457962119image.webp&w=1920&q=75",
     title: "50,000 ֏",
     description: "Դիլիջան",
     qanak: 11,
-    text:"Տնակներ"
+    text:"Տնակներ",
+    code: "AM273",
+    address: "Դիլիջան",
+    overnight: "Այո",
+    buildingArea: "220 քմ",
+    totalArea: "450 քմ",
+    peopleCount: "20",
+    overnightCount: "12",
+    roomCount: "4",
+    bathroomCount: "2",
+    pool: "Առանց լողավազանի",
   },
   {
-    id: 3,
+    id: 12,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1705568809908--0.18602545372675205image.webp&w=1920&q=75",
     description: "Երևան",
     title: "35,000 ֏",
     qanak: 4,
-    text:"Աղմուկից հեռու"
+    text:"Աղմուկից հեռու",
+    code: "AM137",
+    address: "Երևան",
+    overnight: "Այո",
+    buildingArea: "200 քմ",
+    totalArea: "200 քմ",
+    peopleCount: "24",
+    overnightCount: "4",
+    roomCount: "2",
+    bathroomCount: "2",
+    pool: "Փակ, Տաքացվող",
 
 
   },
   {
-    id: 1,
+    id: 13,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1738655037509--0.5071256793581231image.webp&w=1920&q=75",
     description: "Ձորաղբյուր",
     title: "100,000 ֏",
     qanak: 13,
-    text:"Փակ լողավազան"
+    text:"Փակ լողավազան",
+    code: "AM348",
+    address: "Ձորաղբյուր",
+    overnight: "Այո",
+    buildingArea: "230 քմ",
+    totalArea: "630 քմ",
+    peopleCount: "15",
+    overnightCount: "8",
+    roomCount: "3",
+    bathroomCount: "2",
+    pool: "Փակ, Տաքացվող",
 
 
 
   },
   {
-    id: 2,
+    id: 14,
     image1: "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1732616461236--0.6541537220629399image.webp&w=1920&q=75",
     description: "Ձորաղբյուր",
     title: "150,000 ֏",
     qanak: "13",
-    text:"Տնակներ"
+    text:"Տնակներ",
+    code: "AM133",
+    address: "Ձորաղբյուր",
+    overnight: "Այո",
+    buildingArea: "500 քմ",
+    totalArea: "2000 քմ",
+    peopleCount: "20",
+    overnightCount: "10",
+    roomCount: "3",
+    bathroomCount: "2",
+    pool: "Փակ, Տաքացվող",
 
 
   },
   {
-    id: 3,
+    id: 15,
     image1:
       "https://amaranoc.am/_next/image?url=https%3A%2F%2Fapi.amaranoc.am%2Fcompressed_images%2Fcompressed_1735307864481--0.8688546137086155image.webp&w=1920&q=75",
     image3:
@@ -259,7 +362,16 @@ export const dataBase = [
     description: "Քասախ",
     title: "120,000 Դ",
     qanak: "15",
-    text:"Տնակներ "
+    text:"Տնակներ ",
+    code: "AM233",
+    address: "Քասախ",
+    overnight: "Ոչ",
+    buildingArea: "100 քմ",
+    totalArea: "300 քմ",
+    peopleCount: "25",
+    overnightCount: "1",
+    roomCount: "1",
+    pool: "Փակ, Տաքացվող",
 
 
   },

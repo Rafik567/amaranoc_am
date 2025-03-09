@@ -8,6 +8,7 @@ import About from "./Components/Page/About";
 import Carayutyuner from "./Components/Page/Carayutyuner";
 import Footer from "./Components/Footer/Footer";
 import TopHeader from "./Components/Header/TopHeader";
+import OfferDetails from "./Components/Details/OfferDetails";
 
 const App: React.FC = () => {
   const [key, setKey] = useState<string | null>(localStorage.getItem("key"));
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/discount" element={<DisCount />} />
         <Route path="/about" element={<About />} />
+        <Route path="/offer/:id" element={<OfferDetails/>} />
       </Routes>
       
     </Router>

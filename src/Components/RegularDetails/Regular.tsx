@@ -111,7 +111,7 @@ const Regular: React.FC<RegularProps> = ({
             </div>
           ))
         ) : (
-          <p>Երազանքներ չգտնվեցին։</p>
+          <p>Տվյալներ չգտնվեցին։</p>
         )}
       </div>
     </div>
