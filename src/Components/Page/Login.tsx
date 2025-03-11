@@ -13,6 +13,10 @@ const Login: React.FC = () => {
     if (email === "amaranoc@gmail.com" && password === "123456") {
       localStorage.setItem("key", "true");
       location.reload();
+    }else{
+      alert("Դուք չեք լրացրել ճիշտ")
+      location.reload();
+
     }
   }
 
