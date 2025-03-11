@@ -59,7 +59,7 @@
   
 
     return (
-      <div className="w-[300px] flex flex-col space-y-4 lg:space-y-6 p-4 sm:p-6 lg:p-5 lg:rounded-2xl lg:border h-full overflow-y-auto lg:border-secondary-extra-light max-sm:pb-20">
+      <div className="w-[300px] hidden sm:block flex flex-col space-y-4 lg:space-y-6 p-4 sm:p-6 lg:p-5 lg:rounded-2xl lg:border h-full overflow-y-auto lg:border-secondary-extra-light max-sm:pb-20">
         <div className="min-h-[160px]">
           <p className="text-secondary text-text3_bold sm:text-text2_bold">Տարածաշրջան</p>
           <div className="flex flex-col space-y-4 max-h-[160px] overflow-auto styled-scrollbar pr-2">

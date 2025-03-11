@@ -45,7 +45,7 @@ const HomeAll: React.FC<{ setSelectedCategory: (category: string) => void }> = (
     };
 
     return (
-        <div className="max-w-[1400px] mx-auto px-4">
+        <div className="max-w-[1400px] hidden sm:block mx-auto px-4">
             <hr className="my-4" />
             <Slider {...settings}>
                 {data.map((category, index) => (
